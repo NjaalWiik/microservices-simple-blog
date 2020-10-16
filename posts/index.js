@@ -35,10 +35,10 @@ app.post('/posts', async (req, res) => {
 });
 
 app.post('/events', (req, res) => {
+  console.log('Received event ', req.body.type);
   res.send({});
 });
 
 app.listen(4000, () => {
-  console.log('v2');
   console.log('Listening on 4000');
 });

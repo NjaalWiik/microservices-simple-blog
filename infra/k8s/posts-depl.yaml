@@ -22,10 +22,9 @@ metadata:
   name: posts-clusterip-srv
 spec:
   selector:
-    app: posts-clusterip
-  type: ClusterIP
+    app: posts
   ports:
-    - name: posts-clusterip
+    - name: posts
       protocol: TCP
-      port: 4005
-      targetPort: 4005
+      port: 4000
+      targetPort: 4000
