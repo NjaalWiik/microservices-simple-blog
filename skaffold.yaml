@@ -16,3 +16,19 @@ build:
         manual:
           - src: 'src/**/*.js'
             dest: .
+    - image: njaalwiik/comments
+      context: comments
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '*.js'
+            dest: .
+    - image: njaalwiik/event-bus
+      context: event-bus
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '*.js'
+            dest: .
