@@ -55,9 +55,9 @@ app.post('/events', async (req, res) => {
       type: 'CommentUpdated',
       data: {
         id,
+        content,
         status,
-        postId,
-        content
+        postId
       }
     });
   }
