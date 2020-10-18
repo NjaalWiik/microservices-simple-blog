@@ -7,3 +7,12 @@ deploy:
 build:
   local:
     push: false
+  artifacts:
+    - image: njaalwiik/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.js'
+            dest: .
